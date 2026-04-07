@@ -1,86 +1,100 @@
-# 🌌 Vistara AI
+# 🌌 Vistara AI – AI-Powered Trading Decision System
 
-Vistara AI is your **AI-powered trading companion**, designed to simplify technical analysis and provide intelligent insights for smarter decision-making.  
-Built with **React + Firebase + Razorpay + TailwindCSS**, it offers a seamless experience with modern design and secure login.
+Vistara AI is an **AI-driven trading workflow system** that analyzes charts, identifies trade setups, and generates structured trading decisions with clear reasoning.
 
----
-
-## 🚀 Features
-
-- 🔑 **Secure Authentication** (Google & Email login via Firebase)  
-- 📊 **AI-powered Trading Insights**  
-- 💳 **Subscription Plans** (Razorpay / PayPal integration)  
-- 🎨 **Modern UI/UX** with TailwindCSS  
-- ☁️ **Deployed on Render** (auto-deploys on push to GitHub)  
-- 🔒 **Environment-based configuration** (no exposed API keys)  
+The system is designed to **automate technical analysis**, reduce emotional bias, and improve consistency in decision-making.
 
 ---
 
-## 📂 Project Structure
+## 🚀 Core Features
 
-Vistara_Ai/
-│── public/ # Static assets
-│── src/
-│ ├── components/ # React components (LandingPage, Pricing, Login, etc.)
-│ ├── firebase.js # Firebase configuration & auth methods
-│ ├── App.js # Main app router & state
-│ └── index.js # Entry point
-│── .gitignore
-│── package.json
-│── tailwind.config.js
+- 📊 **AI-Based Trade Analysis**
+  - Detects support, resistance, and patterns  
+  - Generates entry, stop-loss, and take-profit levels  
+  - Provides reasoning behind each trade  
+
+- 🔄 **End-to-End Workflow Automation**
+  - Input → Chart / data ingestion  
+  - Processing → AI analysis  
+  - Output → Trade decision  
+
+- ⚠️ **Trade Validation Layer**
+  - Filters weak setups  
+  - Avoids low-probability trades  
+
+- 🧠 **Reasoning Engine**
+  - Explains why a trade should be taken or rejected  
+
+---
+
+## 🏗️ System Architecture
+Chart Input / Screenshot
+↓
+Data Processing Layer
+↓
+AI Analysis Engine
+(Gemini / Local Models)
+↓
+Decision Logic Layer
+(Rules + Validation)
+↓
+Trade Output System
+(Entry / SL / TP + Reason)
 
 
 ---
 
-## ⚡ Getting Started
+## 🛠️ Tech Stack
 
-### 1️⃣ Clone the Repository
+- **Frontend**: React + TailwindCSS  
+- **Backend / Logic**: JavaScript  
+- **AI Models**:
+  - Gemini API  
+  - Hugging Face (local models)  
+- **Auth & Database**: Firebase  
+- **Payments**: Razorpay / PayPal  
+- **Deployment**: Render  
+
+---
+
+## ⚡ Example Output
+Trade: BUY
+Entry: 1.2450
+Stop Loss: 1.2400
+Take Profit: 1.2550
+
+Reason:
+
+Strong support zone
+Bullish structure break
+Momentum confirmation
+
+
+---
+
+## 🎯 Problem Solved
+
+Manual trading often leads to:
+- Inconsistent analysis  
+- Emotional bias  
+- Missed opportunities  
+
+Vistara AI improves this by:
+- Automating analysis  
+- Standardizing decisions  
+- Providing structured reasoning  
+
+---
+
+## ⚙️ Setup Instructions
+
 ```bash
 git clone https://github.com/PritamCodex/Vistara_Ai.git
 cd Vistara_Ai
-```
-
-2️⃣ Install Dependencies
-```bash
 npm install
-```
-
-3️⃣ Environment Setup
-Create a .env file in the root directory:
-```bash
-# Firebase
-REACT_APP_FIREBASE_API_KEY=your-api-key
-REACT_APP_FIREBASE_AUTH_DOMAIN=your-app.firebaseapp.com
-REACT_APP_FIREBASE_PROJECT_ID=your-project-id
-REACT_APP_FIREBASE_STORAGE_BUCKET=your-app.appspot.com
-REACT_APP_FIREBASE_MESSAGING_SENDER_ID=xxxxxxx
-REACT_APP_FIREBASE_APP_ID=xxxxxxx
-REACT_APP_FIREBASE_MEASUREMENT_ID=xxxxxxx
-
-# Razorpay
-REACT_APP_RAZORPAY_KEY=your-razorpay-key
-```
-
-4️⃣ Run Locally (Development)
-```bash
 npm start
 ```
 
-5️⃣ Build for Production
-```bash
-npm run build
-npx serve -s build
-```
-
-🌐 Deployment
-
-We use Render for hosting.
-Build Command: npm install && npm run build
-Start Command: npx serve -s build
-Add all .env variables in Render Dashboard → Environment.
-
-🤝 Contributing
-Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to improve.
-
-⭐ Support
-If you find this project useful, consider leaving a ⭐ on the repo to help others discover it!
+🔐 Environment Variables
+REACT_APP_FIREBASE_API_KEY=your-key
+REACT_APP_RAZORPAY_KEY=your-key
